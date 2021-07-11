@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Template 002 | @rohit_virkud</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body{
+            background-color: #fffff;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .swiper-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        }
+
+        .swiper-slide {
+        box-sizing: border-box;
+        color: transparent;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .slide-01,.slide-02,.slide-03
+        {
+            width: 95%;
+            height: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 0;
+            background-color: grey;
+            border-radius: 5%;
+           
+        }
+       
+
+       
+          
+
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">  
+            <div class="swiper-slide">
+              
+                <div class="slide-01"></div>
+                    
+            </div> <!-- Slide-01 --> 
+
+
+            <div class="swiper-slide">
+                  
+                <div class="slide-02">
+                </div>    
+            </div>
+
+
+            <div class="swiper-slide">
+                <div class="slide-03">
+                    <div class="container">
+
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+
+        </div> <!-- slider wrapper -->  
+    </div> <!-- slider container -->  
+      
+    
+     <!-- swiper js  ----> 
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+      speed: 1200,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+
+
+    /*image zoom in animations*/
+    var test = setInterval(function(){ 
+        if(swiper.activeIndex == 1)
+            {
+                $(".image").addClass("zoomOut");      
+            }else{
+                $(".image").removeClass("zoomOut"); 
+            };
+        },1000);        
+    </script>      
+    
+
+
+</body>
+</html>

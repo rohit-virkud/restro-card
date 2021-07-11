@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Template 002 | @rohit_virkud</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body{
+            background-color: #fffff;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .swiper-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: linear-gradient(180deg, #000000 0%, #000000 100%);
+        }
+
+        .swiper-slide {
+        box-sizing: border-box;
+        color: transparent;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .slide-01,.slide-02,.slide-03,.slide-04
+        {
+            width: 93%;
+            height: 95%;
+            display: flex;
+            flex-direction: column;
+           
+            flex-grow: 0;
+            
+            border-radius: 5%;
+           
+        }
+        .slide-01
+        {
+           overflow: scroll;
+        }
+        .front-img
+        {
+            width: 93vw;
+            height: 25vh;
+            background: url("background.png") no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 0 25vw 0 0;
+        }
+        .profile
+        {
+            width: 25vw;
+            height: 25vw;
+            background: url("profile.png") no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            right: 3.5vw;
+            top: 32vw;
+            border-radius: 50%;
+            filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+        }
+        .front-content
+        {
+            width: 93vw;
+            height: 70vh;
+            background-color: white;
+            margin-top: 2vh;
+            border-radius: 0 0 20vw 0;
+            color: black;
+            display: flex;
+            justify-content: center;
+            
+            
+
+        }
+        .front-content-wrap
+        {
+            width: 93vw;
+            min-height: 60vh;
+            overflow: scroll;
+
+        }
+        .front-container
+        {
+            width: 100vw;
+            height: 55vh;
+            overflow: scroll;
+
+        }
+
+        h1{
+            font-weight: 900;
+            word-break: break-word;
+        }
+        p{
+             word-break: break-word;
+        } 
+
+        .first-name
+        {
+            margin-top: 8vw;
+
+            
+        }
+        .first-name , .last-name
+        {
+            font-size: 6.5vw;
+             margin-left: 10vw;
+            width: 85%;
+        }
+        .tag
+        {
+            font-size: 3vw;
+            letter-spacing: 0.1em;
+             font-weight: 900;
+             margin-top: 2vw;
+            margin-left: 10vw;
+            width: 85%;
+        }
+        .icon-container
+        {
+            display: flex;
+            align-items: center;
+            margin-top: 4vw;
+             margin-left: 10vw;
+            width: 85%;
+
+        }
+
+        .contact-icon
+        {
+            width: 9vw;
+            height: 9vw;
+            filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+        }
+        .contact-lable
+        {
+            margin-left: 3.5vw;
+            font-size: 3.5vw;
+            width: 100%;
+        }
+
+
+    
+        .share-container
+        {
+            width: 90%;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+             bottom: 4%;
+        }
+
+        .save-and-share-icon-container
+        {
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2vw;
+           
+
+        }
+        .save-contact-icon
+        {
+
+            width: 10vw;
+            height: 10vw;
+            filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+ 
+        }
+
+        .save-contact-icon
+        {
+            width: 10.5vw;
+            height: 10.5vw;
+        }
+
+
+        .share-contact-lable
+        {
+            font-size: 2.5vw;
+            margin-top: 2.2vw;
+        }
+
+        .swipe-icon-container
+        {
+            width: 5vw;
+            height:5vw;
+            position: absolute;
+            right: 3%;
+            background: url("swipe-icon.png") no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        .swipe-icon-bottom-container
+        {
+            width: 8vw;
+            height:8vw;
+            position: absolute;
+            right: 3%;
+            bottom: 1.5%;
+            background: url("scroll.png") no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .slide-02
+        {
+            background-color: #FFF5E9;
+             border-radius: 0 0 50vw 50vw;
+             color: black;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             overflow: scroll;
+
+        }
+        .slide-02-title
+        {
+            font-size: 7.5vw;
+            margin-left: 7vw;
+
+        }
+        .slide-two-container
+        {
+            width: 88vw;
+            min-height: 90vh;
+            position: relative;
+        }
+        .about-img
+        {
+           
+            background: url('about-img.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 82vw;
+            height: 82vw;
+            border-radius: 50%;
+          
+            
+        }
+
+        .slide-03
+        {
+            background: url('slide3.png')no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 0 20vw 0vw 20vw;
+            color: white;
+            overflow: scroll;
+
+        }
+        .slide-03-title
+        {
+            width: 80%;
+            text-align: center;
+            margin-top: 120vw;
+            font-size: 5vw;
+        }
+        .swipe-icon-black
+        {
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            width: 5vw;
+            height: 5vw;
+            background: url('swipe-icon-black.png') no-repeat;
+            background-size: contain;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .slide-04
+        {
+             border-radius: 50vw 50vw 0 0;
+             overflow: scroll;
+        }
+
+        .about-img-04
+        {
+            background: url('slide-04.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 82vw;
+            height: 82vw;
+            margin-top: 5vw;
+            border-radius: 50%;
+        }
+
+        .social-icons
+        {
+            margin-top: min(4vw,2vh);
+            margin-left: 7vw;
+        }
+        .social-icons a img
+        {
+            width: min(8vw,5vh);
+            height: min(8vw,5vh);
+            margin-left: 2vw;
+
+        }
+        form
+        {
+            display: flex;
+            flex-direction: column;
+        }
+
+       .input
+       {
+        padding-left:3vw;
+        padding-right:3vw;
+        padding-top:2.5vw;
+        padding-bottom: 2.5vw;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: min(3.405vw,1.8vh);
+        line-height: min(5.085vw,3vh);
+        border-radius: 10vw;
+       }
+
+       .form
+       {
+           display: flex;
+           flex-shrink: 0;
+           flex-direction: column;
+           width: 85%;
+       }
+       .primary-btn
+       {
+         width: 30%;
+       }
+
+
+
+       
+       
+
+       
+          
+
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">  
+            <div class="swiper-slide">
+              
+                <div class="slide-01"> 
+                    <div class="profile"></div>  <!-- Profile -->
+                    <div class="front-img"></div> <!-- Image -->
+
+                    <div class="front-content"> <!-- Content-->
+
+                        <div class="front-container">
+                            <h1 class="first-name">Michal</h1>
+                            <h1 class="last-name">North</h1>
+                            <p class="tag">RESTAURANT MANAGER</p>
+
+                            <a href="#!" class="icon-container" style="margin-top: 8vw">
+                                <img src="phone-icon.png" alt="icon" class="contact-icon" />
+                                <p class="contact-lable">+91 8888306063</p>
+                            </a>
+
+
+                            <a href="#!" class="icon-container">
+                                <img src="home-icon.png" alt="icon" class="contact-icon" />
+                                <p class="contact-lable">+91 8888306063</p>
+                            </a>
+
+
+
+                            <a href="#!" class="icon-container">
+                                <img src="email-icon.png" alt="icon" class="contact-icon" />
+                                <p class="contact-lable">info@artcoolcards.gr</p>
+                            </a>
+
+
+                            <a href="#!" class="icon-container">
+                                <img src="location-icon.png" alt="icon" class="contact-icon" />
+                                <p class="contact-lable">Tarasa Shevchenko 29, Moscow</p>
+                            </a>
+
+
+
+                            <a href="#!" class="icon-container">
+                                <img src="web-icon.png" alt="icon" class="contact-icon" />
+                                <p class="contact-lable">www.artcoolcards.com</p>
+                            </a>
+
+
+                            <div class="share-container">
+
+                           
+                                <a href="#!" class="save-and-share-icon-container">
+                                    <img src="save-contact.png" alt="icon" class="save-contact-icon" />
+                                    <p class="share-contact-lable">save contacts</p>
+                                </a>
+
+
+                                <a href="#!" class="save-and-share-icon-container" style="margin-left: 6vw;">
+                                    <img src="share-contact.png" alt="icon" class="save-contact-icon" />
+                                    <p class="share-contact-lable">share</p>
+                                </a>
+                            </div> <!-- share-save-container -->
+
+                        </div><!-- content-container-end -->
+                        
+                    </div><!-- content-end -->
+
+                    <div class="swipe-icon-container next"></div>
+                    <div class="swipe-icon-bottom-container next "></div>
+
+
+                </div><!-- end-slide01--> 
+            </div> <!-- Slide-01 --> 
+
+
+
+
+
+            <div class="swiper-slide"> 
+                <div class="slide-02">
+                   <div class="slide-two-container"> 
+                    <h1 class="slide-02-title" style="margin-top: 8vw;">About Us</h1>
+                    <p class="about-us" style="white-space: pre-line;margin-top: 5vw;font-size: 4vw;min-height: 34vh;
+    margin-left: 7vw;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+
+Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+
+Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+
+                  <center><div class="about-img"></div></center><br><br>
+                  <div class="swipe-icon-black next"></div>
+
+                  
+                   </div> <!-- front-container --> 
+
+                   <div class="swipe-icon-container prev" style="bottom: 4%;left: 4%;right: 0;"></div>
+                  <div class="swipe-icon-container next" style="bottom:4%;right:4%;transform: rotate(-180deg);"></div>
+
+                  
+
+                </div>    
+            </div>
+
+
+            <div class="swiper-slide">
+                <div class="slide-03" style="overflow: scroll;">
+                    <center><h1 class="slide-03-title">THE ART OF HIGH GASTRONOMY COMBINES WITH PLEASURE, IN A SENSUAL RESULT THAT WILL LEAVE YOU ADDICTED TO PERFECTION.</h1></center>
+                     <div class="swipe-icon-container next" style="transform: rotate(-180deg);"></div>
+                </div>
+                 <div class="swipe-icon-container prev" style="bottom:4%;right:0%;left:3%;"></div>
+            </div>
+
+
+
+            <div class="swiper-slide">
+                <div class="slide-04" style="background: #FFFFFF;color: #000;height: 100vh;margin-top: 7vw;">
+                     
+                    <center><div class="about-img-04"></div></center>
+
+                    <h1 style="font-size: 6vw; margin-left: 7vw;margin-top: 3vw;">Follow Us</h1>
+                    <div class="social-icons" data-swiper-parallax="-250" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                    <a href="#!" >
+                        <img src="fb.png" alt="fb" style="margin-left: 0vw;"/>
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="insta.png" alt="insta"/>
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="youtube.png" alt="youtube" />
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="telegram.png" alt="telegram" />
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="twitter.png" alt="twitter"/>
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="tiktok.png" alt="tiktok"/>
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="linkedin.png" alt="linkedin"/>
+                    </a>
+                </div>
+
+                <h1 style="font-size: 6vw; margin-left: 7vw;margin-top: 8vw;">Our Reviews</h1>
+                  <div class="social-icons">
+                        <a href="#!">
+                            <img src="Tripadvisor.png" alt="fb" style="margin-left: 0;">
+                        </a>
+
+                        <a href="#!" class="mg-lt">
+                            <img src="bookingcom.png" alt="insta">
+                        </a>
+                   </div>
+
+                <h1 style="font-size: 6vw; margin-left: 7vw;margin-top: 8vw;">Subscribe</h1>
+                    <form method="post" class="form" style="margin-top: min(4vw, 3vh); margin-left: min(8vw, 4vh); transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                        <input type="name" name="name" placeholder="Enter Your Name" class="input">
+                        <input type="email" name="email" placeholder="Enter Your Email" class="input" style="margin-top: min(4vw,2vh);">
+                        
+                        <input type="submit" name="submit" value="SUBMIT" class="input primary-btn" style="margin-top: min(4vw,2vh);width: 30%;background-color: #479CDC;color: #ffffff;padding-top:2vw;padding-bottom: 2vw;margin-bottom: 10vw;border:none;">
+                        
+                    </form>
+
+
+
+                </div>
+                  <div class="swipe-icon-container prev" style="top:3%;right:0%;left:3%;"></div>
+            </div>
+  
+
+        </div> <!-- slider wrapper -->  
+    </div> <!-- slider container -->  
+      
+    
+     <!-- swiper js  ----> 
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+      speed: 1200,
+      /*loop: true,*/
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: { nextEl: '.next', prevEl: '.prev' },
+    });
+
+
+    /*image zoom in animations*/
+    var test = setInterval(function(){ 
+        if(swiper.activeIndex == 1)
+            {
+                $(".image").addClass("zoomOut");      
+            }else{
+                $(".image").removeClass("zoomOut"); 
+            };
+        },1000);        
+    </script>      
+    
+
+
+</body>
+</html>
